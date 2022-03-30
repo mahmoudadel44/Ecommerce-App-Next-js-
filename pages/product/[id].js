@@ -21,7 +21,7 @@ const SingleProduct = () => {
   const { id } = useRouter().query;
   useEffect(() => {
     dispatch(getProduct(id));
-  }, [dispatch]);
+  }, [dispatch,id]);
 
   return (
     <>
