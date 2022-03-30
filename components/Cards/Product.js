@@ -60,7 +60,7 @@ const Product = ({ productData }) => {
           className={` ${styles.showDetails}  
 `}
         >
-          <Link href={`/product/${productData.id} `}>
+          <Link href={`/product/${productData.id}`} passHref>
             <div className="btn btn-success mt-2 text-white w-100">
               Show Details
             </div>
