@@ -1,8 +1,11 @@
+.tabNav{
+  margin-top: 100px;
+}
 .cutom {
   width: 180px;
 }
 .tabImagesContainer {
-  margin: 300px 0;
+  margin: 200px 0;
 }
 .imgTabContainer {
   height: 200px;

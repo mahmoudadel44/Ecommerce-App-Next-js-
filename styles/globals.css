@@ -36,6 +36,26 @@ a:hover {
   transition: 0.5s all ease-in-out;
 }
 
+/* ////////////////////////////////////////// Navbar styles////////////////////////////////////////////////////////////// */
+.navbar {
+  background-color: #198754;
+  padding: 12px;
+}
+.num {
+  position: absolute;
+  background-color: green;
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 14px;
+  right: 16px;
+}
+
 /* ////////////////////////////////////////// carousel styles////////////////////////////////////////////////////////////// */
 
 .carousel-indicators [data-bs-target] {
@@ -71,7 +91,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 .paginationBttns a {
   padding: 8px 14px;
@@ -96,4 +116,3 @@ a:hover {
   color: #198754;
   background-color: #bdb7b7;
 }
-

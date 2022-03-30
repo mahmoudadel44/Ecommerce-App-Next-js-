@@ -5,7 +5,7 @@ import axios from "axios";
 export const getProducts = () => async (dispatch) => {
   try {
     const response = await axios.get("https://fakestoreapi.com/products");
-        //  const response = await axios.get("http://localhost:3000/products.json");
+    //  const response = await axios.get("http://localhost:3000/products.json");
     dispatch({
       type: types.FETCH_PRODUCTS,
       payload: response.data,
@@ -49,14 +49,15 @@ export const getCategories = () => async (dispatch) => {
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const filterCategories = (products, category) => async (dispatch) => {
+export const filterCategories = (category) => async (dispatch) => {
+  let path = category !== "ALL" ? `category/${category}` : "";
   try {
     const response = await axios.get(
-      `https://fakestoreapi.com/products/category/${category}`
+      `https://fakestoreapi.com/products/${path}`
     );
     dispatch({
       type: types.FILTER_CATEGORY,
-      payload: category === "ALL" ? products : response.data,
+      payload: response.data,
       category,
     });
   } catch (err) {

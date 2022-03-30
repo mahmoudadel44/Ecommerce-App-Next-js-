@@ -61,7 +61,7 @@ const Product = ({ productData }) => {
         >
           <Link href={`/product/${productData.id} `}>
             <div className="btn btn-success mt-2 text-white w-100">
-              show Details
+              Show Details
             </div>
           </Link>
         </div>

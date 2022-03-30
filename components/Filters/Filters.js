@@ -10,7 +10,6 @@ import {
 
 const Filters = ({}) => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.Products.products);
   const categories = useSelector((state) => state.Products.categories);
   const filteredItems = useSelector((state) => state.Products.filteredItems);
   const category = useSelector((state) => state.Products.category);
@@ -31,7 +30,7 @@ const Filters = ({}) => {
           <h5 className="card-text mt-3">Filter Category</h5>
           <select
             onChange={(e) => {
-              dispatch(filterCategories(products, e.target.value));
+              dispatch(filterCategories( e.target.value));
             }}
             value={category}
             style={{ width: "250px" }}

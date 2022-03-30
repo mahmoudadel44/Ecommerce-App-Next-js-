@@ -20,8 +20,8 @@ const ProductsReducer = (state = initialState, action) => {
       };
     case types.FETCH_PRODUCT:
       return {
+        ...state,
         product: action.payload,
-        filteredItems: action.payload,
         loading: false,
       };
     case types.LOADING:

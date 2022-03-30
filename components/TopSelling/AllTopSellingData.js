@@ -1,65 +1,29 @@
 import Marketting from "../../assets/imgs/marketing.gif";
-let img="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+let img = "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg";
 const allTopSellingData = [
   {
     id: 1,
-    title: "All Denim",
-    img: img,
+    title: "Man's",
+    category: "fa fa-male fa-5x",
+    count: 5000,
   },
   {
     id: 2,
-    title: "bbq party",
-    img: img,
+    title: "Women's",
+    category: "fa fa-female fa-5x",
+    count: 6000,
   },
   {
     id: 3,
-    title: "Beach Lovers",
-    img: img,
+    title: "Jwelery",
+    category: "fa fa-diamond fa-5x",
+    count: 5000,
   },
   {
     id: 4,
-    title: "Beat The Head",
-    img: img,
-  },
-  {
-    id: 5,
-    title: "Coffe Corner",
-    img: img,
-  },
-  {
-    id: 6,
-    title: "Movie Night",
-    img: img,
-  },
-  {
-    id: 7,
-    title: "Pamper Yourself",
-    img: { img },
-  },
-  {
-    id: 8,
-    title: "Pick Your Style",
-    img: img,
-  },
-  {
-    id: 9,
-    title: "Pimp Your Phone",
-    img: img,
-  },
-  {
-    id: 10,
-    title: "Summer Fit",
-    img: img,
-  },
-  {
-    id: 11,
-    title: "Travel Needs",
-    img: img,
-  },
-  {
-    id: 12,
-    title: "See More",
-    img: img,
+    title: "Electronic",
+    category: "fa fa-tv fa-5x",
+    count: 5000,
   },
 ];
 

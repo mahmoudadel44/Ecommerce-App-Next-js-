@@ -3,30 +3,30 @@ import Link from "next/link";
 import Image from "next/image";
 
 //Data
-import AllSettingsData from "./AllSettingsData";
+import AllFeaturesData from "./AllFeaturesData";
 
 //Css
 import styles from "../../styles/AllSettings.module.css";
 
-const AllSettings = () => {
+const AllFeatures = () => {
   return (
     <div className={`${styles.allSettings}`}>
       <div className="container">
         <div className="row">
-          {AllSettingsData &&
-            AllSettingsData.map((data) => (
-              <div className="col-lg-3 col-md-6 col-sm-12" key={data.id}>
+          {AllFeaturesData &&
+            AllFeaturesData.map((feature) => (
+              <div className="col-lg-3 col-md-6 col-sm-12" key={feature.id}>
                 <Link href="#" passHref>
                   <div className={`${styles.settings} p-2 mb-3`}>
                     <div className={styles.imgContainer}>
                       <Image
-                        src={data?.img}
+                        src={feature?.img}
                         alt="settingimg"
                         className={styles.settingImg}
                         layout="fill"
                       />
                     </div>
-                    <span>{data.title}</span>
+                    <span>{feature.title}</span>
                   </div>
                 </Link>
               </div>
@@ -37,4 +37,4 @@ const AllSettings = () => {
   );
 };
 
-export default AllSettings;
+export default AllFeatures;

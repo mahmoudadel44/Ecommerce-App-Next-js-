@@ -12,12 +12,12 @@ import NotFound from "../../pages/404";
 import Spinner from "../Spinner/Spinner";
 import MainCarousel from "../Carousel/MainCarousel";
 import Tabs from "../Tabs/Tabs";
-import AllSettings from "../AllSettings/AllSettings";
+import AllFeatures from "../AllFeatures/AllFeatures";
 import TopSelling from "../TopSelling/TopSelling";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const filteredProducts = useSelector((state) => state.Products.filteredItems);
+  const filteredProducts = useSelector((state) => state.Products?.filteredItems);
   const loading = useSelector((state) => state.Products.loading);
 
   const [pageNumber, setPageNumber] = useState(0);
@@ -34,13 +34,13 @@ const Products = () => {
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
-
-  if (!loading && !filteredProducts) {
-    return <NotFound />;
-  }
   if (loading) {
     return <Spinner />;
   }
+  if ( !filteredProducts) {
+    return <NotFound />;
+  }
+
 
   return (
     <>
@@ -50,11 +50,13 @@ const Products = () => {
           <div className="row text-center">
             <div className="col-lg-8 col-md-7">
               <div className="row">
-                {filteredProducts ?
-                  filteredProducts?.slice(pagesVisited, pagesVisited + productsPerPage)
-                    .map((product) => (
-                      <ProductCard productData={product} key={product.id} />
-                    )):null}
+                {filteredProducts
+                  ? filteredProducts
+                      ?.slice(pagesVisited, pagesVisited + productsPerPage)
+                      .map((product) => (
+                        <ProductCard productData={product} key={product.id} />
+                      ))
+                  : null}
               </div>
             </div>
             <div className="col-lg-4 col-md-5">
@@ -73,10 +75,10 @@ const Products = () => {
             disabledClassName={"paginationDisabled"}
             activeClassName={"paginationActive"}
           />
-          <AllSettings />
           <Tabs />
-          <TopSelling />
+          <AllFeatures />
         </div>
+        <TopSelling />
       </section>
     </>
   );

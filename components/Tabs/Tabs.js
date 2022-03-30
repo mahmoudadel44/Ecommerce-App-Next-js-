@@ -195,7 +195,7 @@ const Tabs = () => {
   return (
     <>
       <ul
-        className="nav nav-pills mb-3 d-flex justify-content-center"
+        className={`${styles.tabNav} nav nav-pills d-flex justify-content-center`}
         id="pills-tab"
         role="tablist"
       >

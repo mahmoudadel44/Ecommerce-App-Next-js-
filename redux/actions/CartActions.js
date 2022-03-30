@@ -19,7 +19,7 @@ export const addToCart = (items, product) => (dispatch) => {
     dispatch({ type: types.ADD_CART, payload: { cartItems } });
     toast.success("item added successfully", { autoClose: 2000 });
   } catch (error) {
-    toast.error("errrrrrrrror", error);
+    toast.error(error);
   }
 };
 

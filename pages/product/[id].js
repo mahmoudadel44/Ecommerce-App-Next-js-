@@ -13,7 +13,7 @@ import Spinner from "../../components/Spinner/Spinner";
 import styles from "../../styles/Products.module.css";
 
 const SingleProduct = () => {
-  const productData = useSelector((state) => state?.Products?.product);
+  const productData = useSelector((state) => state.Products?.product);
   const dispatch = useDispatch();
 
   const { id } = useRouter().query;

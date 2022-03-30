@@ -1,4 +1,4 @@
-.needsRow {
+/* .needsRow {
   background: #eee;
   border-radius: 6px;
 }
@@ -28,4 +28,40 @@
   height: 300px;
   max-width: 300px;
   max-height: 300px;
+} */
+
+/* start section statistics */
+.statistics {
+  background: url("../assets/imgs/work.jpg") no-repeat center center fixed;
+  min-height: 300px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+.statistics .data {
+  background: rgba(2, 2, 2, 0.7);
+  min-height: 300px;
+  color: #b6b5b5;
+  padding-bottom: 70px;
+  padding-top: 40px;
+}
+.statistics .stats {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 30px;
+}
+.statistics .stats:hover {
+  color: #eee;
+}
+.statistics p {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.statistics span {
+  font-size: 16px;
+}
+/* end section statistics */
