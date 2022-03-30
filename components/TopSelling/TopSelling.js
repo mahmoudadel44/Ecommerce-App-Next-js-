@@ -75,24 +75,3 @@ const TopSelling = () => {
 
 export default TopSelling;
 
-// <div class="col-md-3 col-sm-6">
-//           <div class="stats">
-//             <i class="fa fa-comments fa-5x"></i>
-//             <p>6500</p>
-//             <spn>Posted Comments</spn>
-//           </div>
-//         </div>
-//         <div class="col-md-3 col-sm-6">
-//           <div class="stats">
-//             <i class="fa fa-suitcase fa-5x"></i>
-//             <p>1200</p>
-//             <spn>Projects Done</spn>
-//           </div>
-//         </div>
-//         <div class="col-md-3 col-sm-6">
-//           <div class="stats">
-//             <i class="far fa-life-ring fa-5x"></i>
-//             <p>2500</p>
-//             <spn>Tickets Archived</spn>
-//           </div>
-//         </div>

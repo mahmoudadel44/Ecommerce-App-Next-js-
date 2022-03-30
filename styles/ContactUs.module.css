@@ -1,0 +1,35 @@
+.contactUs {
+  background: url("./../assets/imgs/build.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 300px;
+}
+.contactUs .fields {
+  background: rgba(9, 9, 9, 0.4);
+  color: #ddd;
+  min-height: 300px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.contactUs p {
+  margin-bottom: 40px;
+}
+.contactUs input[type="text"],
+.contactUs textarea {
+  background: rgba(82, 78, 78, 0.7);
+  border: none;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.contactUs .textArea {
+  height: 170px;
+}
+.contactUs input[type="text"]:focus,
+.contactUs textarea:focus {
+  border: 1px solid #005c99;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+}

@@ -14,10 +14,14 @@ import MainCarousel from "../Carousel/MainCarousel";
 import Tabs from "../Tabs/Tabs";
 import AllFeatures from "../AllFeatures/AllFeatures";
 import TopSelling from "../TopSelling/TopSelling";
+import ContactUs from "../ContactUs/ContactUs";
+import Footer from "../Footer/Footer";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const filteredProducts = useSelector((state) => state.Products?.filteredItems);
+  const filteredProducts = useSelector(
+    (state) => state.Products?.filteredItems
+  );
   const loading = useSelector((state) => state.Products.loading);
 
   const [pageNumber, setPageNumber] = useState(0);
@@ -37,10 +41,9 @@ const Products = () => {
   if (loading) {
     return <Spinner />;
   }
-  if ( !filteredProducts) {
+  if (!filteredProducts) {
     return <NotFound />;
   }
-
 
   return (
     <>
@@ -79,6 +82,8 @@ const Products = () => {
           <AllFeatures />
         </div>
         <TopSelling />
+        <ContactUs />
+        <Footer />
       </section>
     </>
   );

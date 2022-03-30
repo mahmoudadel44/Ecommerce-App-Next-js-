@@ -39,22 +39,17 @@
   -o-background-size: cover;
   background-size: cover;
 }
-.statistics .data {
+.data {
   background: rgba(2, 2, 2, 0.7);
   min-height: 300px;
   color: #b6b5b5;
   padding-bottom: 70px;
   padding-top: 40px;
 }
-.statistics .stats {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
+
+.stats:hover {
+  transform: scale(1.06);
   transition: all 0.5s ease-in-out;
-  margin-bottom: 30px;
-}
-.statistics .stats:hover {
-  color: #eee;
 }
 .statistics p {
   font-size: 60px;
