@@ -12,6 +12,7 @@ import styles from "../../styles/Products.module.css";
 const Product = ({ productData }) => {
   const cartItems = useSelector((state) => state.Cart?.cartItems);
   const dispatch = useDispatch();
+
   const props = {
     width: 230,
     zoomWidth: 500,
@@ -55,10 +56,13 @@ const Product = ({ productData }) => {
           Add To Cart
         </button>
         <div
-          className={` ${styles.showDetails} btn btn-success mt-2 text-white`}
+          className={` ${styles.showDetails}  
+`}
         >
-          <Link href={`/product/${productData.id}`}>
-            <a>show Details</a>
+          <Link href={`/product/${productData.id} `}>
+            <div className="btn btn-success mt-2 text-white w-100">
+              show Details
+            </div>
           </Link>
         </div>
       </div>

@@ -48,13 +48,15 @@ const MainCarousel = () => {
         {Products &&
           Products.map((product, index) => (
             <Carousel.Item interval={1500} key={index}>
-              <img
-                src={product?.image}
-                key={product.image}
-                alt="Image One"
-                className={styles.carouselImage}
-                layout="fill"
-              />
+              <div className={styles.carouselImageContainer}>
+                <img
+                  src={product?.image}
+                  key={product.image}
+                  alt="Image One"
+                  className={styles.carouselImage}
+                  layout="fill"
+                />
+              </div>
             </Carousel.Item>
           ))}
       </Carousel>

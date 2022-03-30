@@ -3,10 +3,18 @@
   width: 100%;
   padding: 110px 0 140px;
 }
-
+.carouselImageContainer {
+  position: relative;
+  height: 400px;
+  max-height: 400px;
+  width: 50%;
+  max-width: 50%;
+  margin: auto;
+}
 .carouselImage {
   display: block;
   width: 50%;
+  max-width: 50%;
   margin: auto;
   height: 400px;
   max-height: 400px;

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/actions/ProductActions";
 
 //Components
-import CartScreen from "../../pages/CartScreen";
+import CartScreen from "../../pages/cartscreen";
 import ReactPaginate from "react-paginate";
 import ProductCard from "../Cards/Product";
 import Filters from "../Filters/Filters";
@@ -42,7 +42,6 @@ const Products = () => {
     return <Spinner />;
   }
 
-  console.log("allllll", filteredProducts);
   return (
     <>
       <MainCarousel />
@@ -51,12 +50,11 @@ const Products = () => {
           <div className="row text-center">
             <div className="col-lg-8 col-md-7">
               <div className="row">
-                {filteredProducts &&
-                  filteredProducts
-                    .slice(pagesVisited, pagesVisited + productsPerPage)
+                {filteredProducts ?
+                  filteredProducts?.slice(pagesVisited, pagesVisited + productsPerPage)
                     .map((product) => (
                       <ProductCard productData={product} key={product.id} />
-                    ))}
+                    )):null}
               </div>
             </div>
             <div className="col-lg-4 col-md-5">

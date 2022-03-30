@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+
 //Data
 import AllSettingsData from "./AllSettingsData";
 
@@ -15,8 +16,8 @@ const AllSettings = () => {
           {AllSettingsData &&
             AllSettingsData.map((data) => (
               <div className="col-lg-3 col-md-6 col-sm-12" key={data.id}>
-                <Link href="#">
-                  <div className={`${styles.settings} p-2`}>
+                <Link href="#" passHref>
+                  <div className={`${styles.settings} p-2 mb-3`}>
                     <div className={styles.imgContainer}>
                       <Image
                         src={data?.img}

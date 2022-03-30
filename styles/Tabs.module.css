@@ -1,7 +1,20 @@
-
-.cutom{
+.cutom {
   width: 180px;
 }
-.imagesContainer{
-  margin: 130px 0;
+.tabImagesContainer {
+  margin: 300px 0;
+}
+.imgTabContainer {
+  height: 200px;
+  max-height: 200px;
+  width: 200px;
+  max-width: 200px;
+  position: relative;
+  margin:60px 0 100px;
+}
+.tabImg {
+  height: 200px;
+  max-height: 200px;
+  width: 200px;
+  max-width: 200px;
 }

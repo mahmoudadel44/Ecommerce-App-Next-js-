@@ -1,29 +1,55 @@
 import React, { useEffect } from "react";
+import Link from "next/link";
+
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { getProduct } from "../redux/actions/ProductActions";
-import Spinner from "../components/Spinner/Spinner";
+import { useRouter } from "next/router";
+
+import { getProduct } from "../../redux/actions/ProductActions";
+
+//Components
+import Spinner from "../../components/Spinner/Spinner";
+
+//Css
+import styles from "../../styles/Products.module.css";
+
 const SingleProduct = () => {
   const productData = useSelector((state) => state?.Products?.product);
   const dispatch = useDispatch();
-  // const productId = window.location.pathname.replace("/", "").split("/")[1];
-  const { id } = useParams();
-  console.log("id", id);
+
+  const { id } = useRouter().query;
   useEffect(() => {
     dispatch(getProduct(id));
   }, []);
-  console.log("productData", productData);
+
   return (
     <>
-      {productData.length ? (
+      {productData && productData.image ? (
         <section className="singleProduct">
           <div className="container">
+            <div
+              className={` ${styles.showDetails}  
+`}
+            >
+              <Link href={"/"}>
+                <div className="btn btn-success mt-5 text-white w-50">
+                  Go Home
+                </div>
+              </Link>
+            </div>
             <div className="row mt-4">
               <div
-                className="col-md-6 d-flex flex-column justify-content-center align-items-center
+                className="col-md-6 pt-5 d-flex flex-column justify-content-center align-items-center
           "
               >
-                <img src={productData.image} alt="productimg" width={400} />
+                <div className={styles.singleImgContainer}>
+                  <img
+                    src={productData.image}
+                    alt="productimg"
+                    className={styles.singleProductImg}
+                    layout="fill"
+                  />
+                </div>
+
                 <span className="text-muted fw-bold mt-3">
                   {productData.category}
                 </span>

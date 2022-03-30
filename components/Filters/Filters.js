@@ -9,12 +9,12 @@ import {
 } from "../../redux/actions/ProductActions";
 
 const Filters = ({}) => {
+  const dispatch = useDispatch();
   const products = useSelector((state) => state.Products.products);
   const categories = useSelector((state) => state.Products.categories);
   const filteredItems = useSelector((state) => state.Products.filteredItems);
   const category = useSelector((state) => state.Products.category);
   const sort = useSelector((state) => state.Products.sort);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getCategories());

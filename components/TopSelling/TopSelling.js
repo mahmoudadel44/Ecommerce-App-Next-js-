@@ -18,8 +18,7 @@ const TopSelling = () => {
         <div className="row">
           {AllTopSellingData &&
             AllTopSellingData?.map((topSell) => (
-              <div className="col-md-2 col-sm-12" key={topSell.id}>
-                <Link href="#">
+              <div className="col-lg-2 col-md-3 col-sm-12" key={topSell.id}>
                   <div className={`${styles.need} my-2`}>
                     <div className={styles.imgContainer}>
                       {topSell?.img && (
@@ -33,7 +32,6 @@ const TopSelling = () => {
                     </div>
                     <span className={styles.title}>{topSell.title}</span>
                   </div>
-                </Link>
               </div>
             ))}
         </div>

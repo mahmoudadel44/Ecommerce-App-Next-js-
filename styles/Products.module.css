@@ -27,12 +27,23 @@
 .showDetails {
   width: 290px;
 }
-.showDetails a {
-  color: #fff;
-}
+
 .btn-check:focus + .btn-success,
 .btn-success:focus {
   box-shadow: none;
+}
+.singleImgContainer {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  max-width: 400px;
+  max-height: 400px;
+}
+.singleProductImg {
+  width: 400px;
+  height: 400px;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 @media (max-width: 776px) {
@@ -45,7 +56,6 @@
     text-align: center;
   }
 }
-
 
 @media (max-width: 767px) {
   .allProducts .col-lg-3 {

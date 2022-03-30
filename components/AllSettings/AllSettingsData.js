@@ -3,6 +3,7 @@ import Official from "../../assets/imgs/official.png";
 import Global from "../../assets/imgs/global.png";
 import One from "../../assets/imgs/JumiaOne_1.png";
 import Orange from "../../assets/imgs/orange.png";
+
 const AllSettingsData = [
   {
     id: 1,
