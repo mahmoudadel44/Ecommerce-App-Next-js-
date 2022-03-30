@@ -17,18 +17,20 @@ import TopSelling from "../TopSelling/TopSelling";
 import ContactUs from "../ContactUs/ContactUs";
 import Footer from "../Footer/Footer";
 
+//Css
+import styles from "../../styles/Products.module.css";
+
 const Products = () => {
   const dispatch = useDispatch();
   const filteredProducts = useSelector(
     (state) => state.Products?.filteredItems
   );
-  const loading = useSelector((state) => state.Products.loading);
 
+  const loading = useSelector((state) => state.Products.loading);
   const [pageNumber, setPageNumber] = useState(0);
 
   const productsPerPage = 4;
   const pagesVisited = pageNumber * productsPerPage;
-
   const pageCount = Math.ceil(filteredProducts.length / productsPerPage);
 
   const changePage = ({ selected }) => {
@@ -38,6 +40,7 @@ const Products = () => {
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
+
   if (loading) {
     return <Spinner />;
   }
@@ -48,7 +51,7 @@ const Products = () => {
   return (
     <>
       <MainCarousel />
-      <section className="allProducts mt-5" style={{ marginTop: "-1000px" }}>
+      <section className={`${styles.allProducts} mt-5`}>
         <div className="container">
           <div className="row text-center">
             <div className="col-lg-8 col-md-7">

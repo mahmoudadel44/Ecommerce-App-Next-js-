@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-const Navbar = () => {
+import React from "react";
+import Link from "next/link";
 
+const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" href="#" passHref>
           Ecommerce App
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -18,7 +19,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="mynavbarr">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#"></a>
+              <Link className="nav-link" href="#" passHref></Link>
             </li>
           </ul>
         </div>

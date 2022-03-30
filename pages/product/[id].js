@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
@@ -23,6 +24,14 @@ const SingleProduct = () => {
 
   return (
     <>
+      <Head>
+        <title>Ecommerce</title>
+        <link
+          rel="icon"
+          href="https://image.shutterstock.com/image-vector/selfservice-supermarket-full-shopping-trolley-260nw-374614351.jpg"
+        />
+      </Head>
+
       {productData && productData.image ? (
         <section className="singleProduct">
           <div className="container">

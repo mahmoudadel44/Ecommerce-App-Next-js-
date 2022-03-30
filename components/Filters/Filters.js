@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+//Actions
 import {
   filterCategories,
   filterPrice,
@@ -33,7 +34,6 @@ const Filters = ({}) => {
               dispatch(filterCategories( e.target.value));
             }}
             value={category}
-            style={{ width: "250px" }}
           >
             <option value="ALL">ALL</option>
             {categories &&
@@ -45,7 +45,6 @@ const Filters = ({}) => {
           </select>
           <h5 className="card-text mt-3">Filter Price</h5>
           <select
-            style={{ width: 250 }}
             onChange={(e) =>
               dispatch(filterPrice(filteredItems, e.target.value))
             }
@@ -58,7 +57,6 @@ const Filters = ({}) => {
           <h5 className="card-text mt-3">Sorting</h5>
 
           <select
-            style={{ width: 250 }}
             onChange={(e) =>
               dispatch(filterSort(filteredItems, e.target.value))
             }

@@ -14,7 +14,7 @@ export const getProducts = () => async (dispatch) => {
     toast.error(err);
   }
 };
-////////////////////////////////////////////////////////////////////////////////////////
+
 
 export const getProduct = (id) => async (dispatch) => {
   try {
@@ -32,7 +32,7 @@ export const getProduct = (id) => async (dispatch) => {
   }
 };
 
-////////////////////////////////////////////////////////////////////////////////////////
+
 
 export const getCategories = () => async (dispatch) => {
   try {
@@ -48,7 +48,7 @@ export const getCategories = () => async (dispatch) => {
   }
 };
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 export const filterCategories = (category) => async (dispatch) => {
   let path = category !== "ALL" ? `category/${category}` : "";
   try {
@@ -65,7 +65,7 @@ export const filterCategories = (category) => async (dispatch) => {
   }
 };
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
+
 export const filterPrice = (sortedItems, sort) => (dispatch) => {
   let products = sortedItems.slice();
   return dispatch({
@@ -90,7 +90,8 @@ export const filterPrice = (sortedItems, sort) => (dispatch) => {
     },
   });
 };
-//////////////////////////////////////////////////////////////////////////////////////
+
+
 export const filterSort = (products, sort) => async (dispatch) => {
   try {
     const response = await axios.get(

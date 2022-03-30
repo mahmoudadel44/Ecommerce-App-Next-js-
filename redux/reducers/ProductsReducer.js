@@ -9,6 +9,7 @@ const initialState = {
   sort: "",
   loading: true,
 };
+
 const ProductsReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.FETCH_PRODUCTS:

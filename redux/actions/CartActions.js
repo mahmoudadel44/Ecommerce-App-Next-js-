@@ -23,6 +23,8 @@ export const addToCart = (items, product) => (dispatch) => {
   }
 };
 
+
+
 export const removeFromCart = (items, product) => (dispatch) => {
   try {
     const cartItems = items.slice().filter((a) => a.id !== product.id);
@@ -32,6 +34,7 @@ export const removeFromCart = (items, product) => (dispatch) => {
     toast.error("errrrrrrrror", error);
   }
 };
+
 
 export const removeAllProducts = () => {
   try {

@@ -1,11 +1,14 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Cart from "../components/Cart/Cart";
 import { removeAllProducts } from "../redux/actions/CartActions";
+
+//Components
+import Cart from "../components/Cart/Cart";
 
 const CartScreen = () => {
   const cartItems = useSelector((state) => state.Cart?.cartItems);
   const dispatch = useDispatch();
+
   return (
     <div className="row mt-3">
       <div className="d-flex justify-content-between mb-2">

@@ -1,7 +1,9 @@
 import * as types from "../types/types";
+
 const initialState = {
   cartItems: [],
 };
+
 const CartReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.ADD_CART:

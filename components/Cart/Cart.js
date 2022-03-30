@@ -16,7 +16,7 @@ const Cart = () => {
       {cartItems &&
         cartItems?.map((item) => (
           <div
-            className={`${styles.cartContent} animate__animated animate__fadeInDown`}
+            className={`${styles.cartContent}`}
             key={item.id}
           >
             <div className="d-flex">
