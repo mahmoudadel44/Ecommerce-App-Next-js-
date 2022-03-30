@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/actions/ProductActions";
 
 //Components
-import CartScreen from "../../pages/cartscreen";
+import CartScreen from "../CartScreen/CartScreen";
 import ReactPaginate from "react-paginate";
 import ProductCard from "../Cards/Product";
 import Filters from "../Filters/Filters";

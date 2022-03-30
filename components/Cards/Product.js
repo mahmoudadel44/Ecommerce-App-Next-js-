@@ -27,6 +27,7 @@ const Product = ({ productData }) => {
           <Link
             href={`/product/${productData.id}`}
             className={`${styles.productCard} py-3`}
+            passHref
           >
             <>
               <div

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -20,7 +21,7 @@ const SingleProduct = () => {
   const { id } = useRouter().query;
   useEffect(() => {
     dispatch(getProduct(id));
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
@@ -39,7 +40,7 @@ const SingleProduct = () => {
               className={` ${styles.showDetails}  
 `}
             >
-              <Link href={"/"}>
+              <Link href={"/"} passHref>
                 <div className="btn btn-success mt-5 text-white w-50">
                   Go Home
                 </div>
@@ -51,7 +52,7 @@ const SingleProduct = () => {
           "
               >
                 <div className={styles.singleImgContainer}>
-                  <img
+                  <Image
                     src={productData.image}
                     alt="productimg"
                     className={styles.singleProductImg}

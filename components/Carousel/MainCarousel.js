@@ -1,5 +1,5 @@
-
 import React from "react";
+import Image from "next/image"
 import { Carousel } from "react-bootstrap";
 import { useSelector } from "react-redux";
 
@@ -16,7 +16,7 @@ const MainCarousel = () => {
           Products.map((product, index) => (
             <Carousel.Item interval={1500} key={index}>
               <div className={styles.carouselImageContainer}>
-                <img
+                <Image
                   src={product?.image}
                   key={product.image}
                   alt="Image One"
