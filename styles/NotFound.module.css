@@ -1,0 +1,28 @@
+.notFoundContainer {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.notFoundContainer a {
+  font-size: 22px;
+  margin-top: 40px;
+  font-weight: bold;
+  color: #000;
+}
+.imgContainer {
+  width: 470px;
+  height: 470px;
+  max-height: 470px;
+  max-width: 470px;
+  position: relative;
+}
+.notFoundImg {
+  width: 470px;
+  height: 470px;
+  max-height: 470px;
+  max-width: 470px;
+}

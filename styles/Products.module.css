@@ -1,0 +1,62 @@
+.allCards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100000;
+  position: relative;
+}
+.allCards button {
+  box-shadow: none;
+  width: 290px;
+}
+
+.allCards .card:hover {
+  transform: scale(1.03);
+  transition: 0.5s all ease-in-out;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 18rem;
+  height: 376px;
+  cursor: pointer;
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+.showDetails {
+  width: 290px;
+}
+.showDetails a {
+  color: #fff;
+}
+.btn-check:focus + .btn-success,
+.btn-success:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 776px) {
+  .allCards {
+    display: flex;
+    justify-content: center !important;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .allProducts .col-lg-3 {
+    justify-content: center;
+    display: flex;
+  }
+  .allProducts .col-lg-3 .productCard {
+    height: 300px;
+  }
+  .allProducts .col-lg-3 .productCard:hover {
+    transform: scale(1.01);
+    transition: 0.5s all ease-in-out;
+  }
+}
